@@ -3,18 +3,15 @@
 static int __init hello_init(void)
 {
         printk(KERN_INFO "Hello world\n");
-        BUG();
         return 0;
 }
 static void __exit hello_exit(void)
 {
-        printk(KERN_INFO "in exit\n");
+        printk(KERN_INFO "!!!!!!!\n");
 }
 
 module_init(hello_init);
 module_exit(hello_exit);
-
-
+MODULE_LICENSE("GPL");
 MODULE_AUTHOR("sireesha");
 MODULE_DESCRIPTION("hello world module");
-MODULE_LICENSE("GPL");
